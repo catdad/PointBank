@@ -1,0 +1,20 @@
+iframe#map.map(src='', scrolling='no', frameBorder='0')
+
+div.content.task
+	div#task
+
+	div.left.half
+		div#data.content
+		
+	div.right.half.center
+		div#actions.section
+		div#portal.section
+		div#viz.section
+		div#extra.section.hidden
+	
+	div.clear
+	
+script(src='/public/lib/js/task.js')
+script(src='/public/lib/js/taskButtons.js')
+script
+	parseTasks(!{JSON.stringify(data)});

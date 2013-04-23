@@ -1,0 +1,25 @@
+div.content
+	div.container
+		div.span10.offset1
+			div.span3
+				h2 Import task data
+	hr
+		
+	div.container
+		div.span10.offset1
+			p.span10
+				b Import URL: 
+				i (Please provide the JSON endpoint)
+			div.span10
+				input#url.span6(type='text', placeholder='http://...', autofocus)
+			div.span10
+				button#import Import
+		
+		div.span10.offset1
+			p  
+			p.small.span10
+				i Please make sure to add "&detailed=true&limit=0" to the task URL.
+		
+		div#output
+		
+	script(src='/public/lib/js/import.js')

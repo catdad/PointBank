@@ -1,0 +1,50 @@
+div.content
+	div.container.span10
+		h2 Create new task
+
+		#form
+			p.bold Search Term:
+			input#term(type='text', autofocus)
+			
+			p.bold Total Tweets:
+			input#tweets(type='number', min='0', max='100000')
+			
+			p.bold Interval in minutes
+			input#interval(type='number')
+			
+			p.bold Location
+				br
+				#lookup Lookup
+				#lookupHidden
+					input#address(type='text', placeholder='Location')
+					br
+					button#find(value='find') Find
+					
+					#lookupResult
+					br
+				
+				input#lat(type='number', placeholder='Lat', title='Lat')
+				br
+				input#lon(type='number', placeholder='Long', title='Lon')
+				br
+				input#radius(type='number', placeholder='Radius', title='Radius')
+				br
+				label.radio.inline Miles
+					input#radMi(type='radio', value='Mi', name='radUnit')
+				label.radio.inline Kilometers
+					input#radKm(type='radio', value='Km', name='radUnit')
+			
+			p.bold Location options
+			
+			label.checkbox collect tweets with coordinates
+				input#geo(type='checkbox', value='true')
+			label.checkbox try to geocode tweet location
+				input#geocode(type='checkbox', value='true', disabled='disabled')
+			
+			br
+			button#submit(value='submit', name='Submit') Submit
+			
+		p
+			#output
+
+script(src='/public/lib/js/createTask.js')

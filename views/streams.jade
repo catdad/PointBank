@@ -1,0 +1,29 @@
+div.content
+	div.container
+		div.span10.offset1
+			h2.span4 Stream Tasks
+		
+	hr
+	
+	div.container.events
+		div.span10.offset1
+			div.span10
+				input#query.span6(type='text', placeholder='track term...')
+				br
+				button.createTask Create New Task
+			div.span10(style='margin-top: 10px; margin-bottom: 10px')
+				a.stopTask(href='#') Stop running task
+				br
+				a(href='/public/socketmap/index.html', target='_blank') View data stream on a map
+	
+	div.container.events
+		div.span10.offset1
+			div#tasks
+
+script(src='/socket.io/socket.io.js')
+script(src='/public/lib/js/streams.js')
+script
+	var runningTask = '!{running}';
+	if (runningTask === 'false') runningTask = false;
+	parseData(!{JSON.stringify(data)});
+	

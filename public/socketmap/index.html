@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Twitter Streaming</title>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<h1>Real-time streaming of geolocated tweets <span class='count' id='totaldiv'></span></h1>
+	<div id="map"></div>
+	<div id="options">
+		<strong> 
+		<input type="radio" name="display" val="points" onclick="chooseDisplay('points')" checked>
+		<label>Points</label>
+		<input type="radio" name="display" val="clusters" onclick="chooseDisplay('clusters')">
+		<label>Clusters</label>
+		<input type="radio" name="display" val="heatmap" onclick="chooseDisplay('heatmap')">
+		<label>Heatmap</label>
+		</strong>
+	</div>
+	<strong> 
+		powered by <a href="http://nodejs.org">Node   </a>, 
+		<a href="http://expressjs.com">Express</a>, 
+		<a href="http://socket.io">Socket.io</a> and 
+		<a href="http://resources.arcgis.com">ArcGIS maps</a>
+	</strong>
+	
+<script src="js/socket.io.js"></script>
+<script src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.0compact"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/heatlayer.js"></script>
+<script src="js/cluster.js"></script>
+<script src="js/map.js"></script>
+
+</body>
+</html>

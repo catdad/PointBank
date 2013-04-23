@@ -1,0 +1,7 @@
+{
+	"nodePort": 8888,
+	"dbHost": "localhost:27017/",
+	"dbName": "twitter",
+	"maxTasks": 25,
+	"maxTweets": 50000
+}

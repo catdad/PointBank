@@ -1,0 +1,15 @@
+# ignore mongo data
+data/db/*
+
+#ignore node files
+nodejs/*
+node_modules/*
+
+#ignore keys file
+keys.json
+
+#ignore art
+art/*
+
+#misc windows files
+Thumbs.db

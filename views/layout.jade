@@ -1,0 +1,56 @@
+!!! 5
+html
+	head
+	//title= title
+	title Point Bank
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	link(rel='stylesheet', href='/public/lib/css/main.css')
+	link(rel='icon', type='image/png', href='/public/img/point50.png')
+	script(src='/public/lib/js/jquery-1.7.2.min.js')
+	script(src='/public/lib/bootstrap/js/bootstrap.min.js')
+	script(src='/public/lib/js/page.js')
+	
+	body
+		div#container
+			div#nav
+				ul.wrapper
+					li
+						a(href='/') Home
+					li.divider
+					li
+						a(href='/collect') Collect
+					li
+						a(href='/data') Data
+					li.divider
+					li
+						a(href='/api') API
+					//li
+						a(href='/help') Documentation
+					
+					//li.divider
+					//li
+						a(href='/twitter') Search Tasks
+					//li
+						a(href='/stream') Stream Tasks
+					
+					//li
+					//	a(href='/local') View local geocoder names
+					//li
+					//	a(href='/discarded') View discarded location names
+					//li
+					//	a(href='/invalid') View invalid location names
+					//li
+					//	a(href='/legacy') View the legacy discarded table						
+
+			div#main.wrapper!= body
+			
+			div#footer
+				div.wrapper
+					p.content V 0.3.1
+			
+		script(src='/public/lib/js/script.js')

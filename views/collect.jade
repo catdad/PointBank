@@ -1,0 +1,61 @@
+div.content.form
+	div.section
+		div Pick one:
+		div.option
+			input(name='type', id='search', type='radio', value='search')
+			label(for='search') Search
+			div.indent	
+				label.newline Interval (in minutes)
+				input(name='interval', id='interval', type='text')
+		div.option
+			input(name='type', id='stream', type='radio', value='stream')
+			label(for='stream') Stream
+		
+	div.section
+		div Query to track:
+		input(type='text', name='query')
+	
+	div.section
+		div Number of tweets to collect:
+		div.note 0 for infinite (not yet enabled)
+		input(type='text', name='desiredTweets')
+	
+	div.section
+		div
+			div Where to search:
+			span.margin
+				input(type='radio', name='location', value='none', checked='true')
+				span Everywhere
+			span.margin
+				input(type='radio', name='location', value='picker')
+				span Add location
+		iframe(src='/public/picker/index.html', id='picker')
+	
+	div.section
+		div Location Options:
+		div
+			input(type='checkbox', name='toGetCoords')
+			span Collect coordinates
+		div
+			input(type='checkbox', name='toGeocode')
+			span Geocode location names *
+		div
+			input(type='checkbox', name='toSaveAll')
+			span Collect tweets with no location
+		
+		div.note * geocoding will decrease the quality of the data to about city-level
+	
+	button#submit Submit
+	
+	br
+	hr
+	
+	div Legacy links. These may not work.
+	div
+		a(href='/twitter/create') Create a new task
+		br
+		a(href='/twitter/import') Import task from URL
+		br
+		a(href='/twitter/compilation') Create compilation
+	
+script(src='/public/lib/js/collect.js')

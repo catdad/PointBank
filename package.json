@@ -1,0 +1,22 @@
+{
+	"name":"GeoCollector",
+	"version":"0.1.5",
+	"description":"A configurable, task-based framework for storing, filtering, enriching, and consuming geofeeds.",
+	"dependencies":{
+		"express":"2.5.x",
+		"jade":"0.26.x",
+		"mongojs":"0.4.x",
+		"request":"2.9.x",
+		"gzippo":"0.1.x",
+		"tuiter":"0.1.x",
+		"proj4js":"0.3.x",
+		"socket.io":"0.9.x",
+		"speakeasy-nlp":"0.2.x",
+		"async":"0.2.x"
+	},
+	"engine":"node >= 0.6.x",
+	"author": {
+		"name": "Kiril Vatev",
+		"email": "vatev.1@gmail.com"
+	}
+}

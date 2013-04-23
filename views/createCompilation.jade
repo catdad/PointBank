@@ -1,0 +1,23 @@
+div.content
+	div.container
+		div.span10.offset1
+			h2.span3 Available Tasks
+		
+	hr
+		
+	div.container
+		div.span10.offset1
+			div#tasks.span6
+			div.span5
+				div#urls
+				button(id='addUrl') Add from URL
+	hr
+	
+	div.container
+		div.span10.offset1
+			div.span5
+				button(id='compile') Merge Tasks
+		
+script(src='/public/lib/js/createCompilation.js')
+script
+	parseData(!{JSON.stringify(data)})

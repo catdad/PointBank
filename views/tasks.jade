@@ -1,0 +1,18 @@
+div.content
+	div#filters
+		span.block Filter: 
+			div.filter.button.selected(data-filter='all') All
+			div.filter.button(data-filter='search') Search
+			div.filter.button(data-filter='stream') Stream
+		span.block Sort: 
+			div.sort.button.selected(data-sort='none') None
+			div.sort.button(data-sort='date') Date
+			div.sort.button(data-sort='count') Tweet Count
+	
+	div#cardContainer
+		div#cards
+			
+script(src='/public/lib/js/jquery.quicksand.js')
+script(src='/public/lib/js/tasks.js')
+script
+	parseData(!{JSON.stringify(data)})

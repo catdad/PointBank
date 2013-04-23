@@ -1,0 +1,102 @@
+div.content
+	//div Sample URL for consuming JSON data from tasks:
+	//div
+	//	i http://task_URL?limit=100&start_time=1340801450000&end_time=1340841480000&order=d&near=40.5645,-97.5487,12&callback=processResults
+	
+	div
+		b The following are the query options on HTML, JSON, and esriJSON endpoints.
+	div
+		b These options are available on all data URLs, under the format: 
+		i /data/{id}/query?
+	br
+	
+	div.apibox
+		div.apilabel f
+			div.apioption Optional
+		div.apidescription
+			p The format in which the data should be returned. The default for this is "html".
+			b Possible values
+			span : 
+			i "json" or "html"
+		div.clear
+	
+	div.apibox
+		div.apilabel limit
+			div.apioption Optional
+		div.apidescription
+			p The amount of tweets to return, in integer form. The default value is 100.
+			b Example value
+			span : 
+			i 500
+		div.clear
+	
+	div.apibox
+		div.apilabel start_time
+			div.apioption Optional
+		div.apidescription
+			p Specifies the time for the earliest tweet to return. This value is represented by an epoch time. The default is the earliest available in the collection.
+			b Example value
+			span : 
+			i 1340841480000
+		div.clear
+	
+	div.apibox
+		div.apilabel end_time
+			div.apioption Optional
+		div.apidescription
+			p Specifies the time for the latest tweet to return. This value is represented by an epoch time. The default is the latest available in the collection.
+			b Example value
+			span : 
+			i 1340841480000
+		div.clear
+	
+	div.apibox
+		div.apilabel order
+			div.apioption Optional
+		div.apidescription
+			p The order in which the tweets should be returned, based on the time of the tweet. The default is descending if this value is not specified.
+			b Possible values
+			span :
+			div "a" for ascending  order (oldest first)
+			div "d" for descending order (newest first)
+		div.clear
+		
+	div.apibox
+		div.apilabel from_id
+			div.apioption Optional
+		div.apidescription
+			p Specifies the _id for the earliest desired tweet.
+			b Example value
+			span : 
+			i 4feb9e3581137d8c210003a7
+		div.clear
+		
+	div.apibox
+		div.apilabel near
+			div.apioption Optional
+		div.apidescription
+			p This parameter takes a latitude, longitude, and a distance in miles to geofence the tweets returned. These values are sent as numbers and separated by commas.
+			b Example value
+			span : 
+			i 37.8698807,-122.2705383,12
+		div.clear
+	
+	div.apibox
+		div.apilabel detailed
+			div.apioption Optional
+		div.apidescription
+			p Defines whether to return the full tweet, or only select attributes. The default value is false.
+			b Possible values
+			span : 
+			i true or false
+		div.clear
+		
+	div.apibox
+		div.apilabel callback
+			div.apioption Optional
+		div.apidescription
+			p The JavaScript callback for the result to be wrapped in, sent as a string.
+			b Example value
+			span : 
+			i processResults
+		div.clear
