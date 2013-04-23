@@ -1,15 +1,12 @@
 #Point Bank
----------
 
-Research software for geocoded location and analysis of tweets.
+##Getting Started
 
-##Getting Started:
-
-The code and all downloads are available from the Point Bank GitHub repository, located at https://github.com/catdad/PointBank. This manual is a living document, and will be updated as the software receives updates. It is valid as of April 18, 2013, but the GitHub page will provide the most up-to-date version, as well as an updated date.
+The code and all downloads are available from the Point Bank GitHub repository, located at https://github.com/catdad/PointBank. This manual is a living document, and will be updated as the software receives updates. This is the most up-to-date version. Refer to the commit date of this file for a "last updated" date.
 
 ###I: Running the application in Windows
 
-There is a Windows specific package for the application. There is a 32-bit zip and 64-bit zip, which include all of the correct binaries and settings. Download the appropriate zip file, and unzip it anywhere on your computer. It is advisable to use an easily accessible location, like C:\Workspace.
+There is a Windows specific package for the application. There is a 32-bit zip and 64-bit zip, which include all of the correct binaries and settings. Download the appropriate zip file, and unzip it anywhere on your computer. It is advisable to use an easily accessible location, like C:\Workspace. _(These are still being set up.)_
 
 When you unzip the archive, you will see a start.bat file. Double click this file, and the application will start – it will open two separate command-line windows, although interaction with those windows is not necessary.
 
@@ -23,11 +20,11 @@ Google will help with this. Searching for guides on setting up and configuring N
 
 On a Mac, there are pre-built binaries of all of the files that are needed. These will be available at http://nodejs.org/download/ and http://www.mongodb.org/downloads. For Linux distributions, there is a good chance you will have to build these packages from source. Follow the guide that you find online.
 
-The default file for the application is app.js. This will  be the file that needs to be used when starting NodeJS. The software is designed to work with the default settings of both NodeJS and MongoDB, but if you need to change anything – such as port numbers – you can do so in the config.json file.
+The default file for the application is `app.js`. This will  be the file that needs to be used when starting NodeJS. The software is designed to work with the default settings of both NodeJS and MongoDB, but if you need to change anything – such as port numbers – you can do so in the `config.json` file.
 
 ###III: Setting up oAuth access
 
-Authentication is required for all calls to the Twitter API. The application is not distributed with access tokens, so each user will have to generate their own. There is a keys.json file distributed with the application, where you will need to paste your keys. Getting keys is a straightforward process that is done through the Twitter website.
+Authentication is required for all calls to the Twitter API. The application is not distributed with access tokens, so each user will have to generate their own. There is a `keys.json` file distributed with the application, where you will need to paste your keys. Getting keys is a straightforward process that is done through the Twitter website.
 
 1. First, you must have a Twitter account. Sign up accordingly at https://twitter.com/
 2. Go to https://dev.twitter.com/apps and sign in. This is the developer area of Twitter.
@@ -36,7 +33,7 @@ Authentication is required for all calls to the Twitter API. The application is 
 5. By default, this application will run on personal computers, and not be accessible to the web. Therefore, the Website URL does not matter, and you can use a placeholder, such as `http://www.example.com`.
 6. Leave Callback blank. Agree to the terms and submit the form.
 
-Submitting the form will take you to the specific app section. Here, among other things, you will find the fields “Consumer key” and “Consumer secret”. These identify your specific application to Twitter. These need to be included in the keys.json file under `consumer_key` and `consumer_secret`, accordingly.
+Submitting the form will take you to the specific app section. Here, among other things, you will find the fields “Consumer key” and “Consumer secret”. These identify your specific application to Twitter. These need to be included in the `keys.json` file under `consumer_key` and `consumer_secret`, accordingly.
 
 Next, click the “Create my access tokens” at the bottom of the app page. This will generate tokens specific to your user account (rather than specific to the app). Creating these tokens may take a second or two, but after you refresh the page, there will be two tokens available, the “Access token” and the “Access token secret”. These need to be places in the `keys.json` file as `oauth_token` and `oauth_token_secret`.
 
@@ -52,7 +49,7 @@ This URL will take you to the start page. From there, you can go to Collect to c
 
 ###V: Collecting tweets
 
-Collecting data is done through specific tasks – think of a sentence like “search for tweets with the word ‘cheesecake’ in the continental United States that have a location.” All of this can be set up through the form. Here are the basic steps.
+Collecting data is done through specific tasks -- think of a sentence like “search for tweets with the word ‘cheesecake’ in the continental United States that have a location.” All of this can be set up through the form. Here are the basic steps.
 
 1. Pick whether you would like to Search or Stream. Search is most appropriate if you are interested in getting already submitted Tweets. This will take a bit longer, and is not in real time, but is helpful if you just want the Tweets that were submitted yesterday or in the past several hours. If searching, you will need to provide an interval, so that the search is repeated every so often. Stream is most appropriate for real-time tasks and tweets that will be submitted in the future. This is useful if you would like to track an event and you can start the task ahead of time, such as conferences or storms with enough warning.
 2. Pick what you would like to search for. This can be any term that you would regularly type into the search box on Twitter. For example, you can search for words, phrases, or hashtags.
@@ -69,12 +66,12 @@ Click Submit. This will take you to the Data page, where you will see a card for
 When you click on Data in the navigation bar, you will see all of the tasks that you have created. Each task will have a Map button that will show you a quick map, and a Details button that will show you more information and options for each task. On the details page, there are two columns. The left column will give you detailed information on the task that was created, as well as statistics on the tweets that were collected. The right column has data and visualizations options. The Action buttons allow you to start and stop collecting, as well as delete all of the data associated with that task. These buttons are further described in section V.
 
 Various visualizations are also available.
-* basic map: this will open a simple map and display the tweets.
-* ArcGIS Online: this will open the tweets in ArcGIS Online using Esri’s format of JSON data, where you can save them as a webmap and export to various places. This is external service.
-* Google Maps: this will open the tweets in Google Maps using the GeoJSON format. This is an external service, and is not yet fully implemented.
-* WebGL globe: this will open the tweets in a 3D globe. This is an experimental external service.
+- **basic map**: this will open a simple map and display the tweets.
+- **ArcGIS Online**: this will open the tweets in ArcGIS Online using Esri’s format of JSON data, where you can save them as a webmap and export to various places. This is external service.
+- **Google Maps**: this will open the tweets in Google Maps using the GeoJSON format. This is an external service, and is not yet fully implemented.
+- **WebGL globe**: this will open the tweets in a 3D globe. This is an experimental external service.
 
-From the details page, it is also possible to query the data – this is the way to retrieve JSON out of the database. However, the interface for this has not been fully developed. Currently, it is only possible to query the data using a standard API format through URL GET requests. You can go to `http://localhost:8888/api` in the application to find out more about querying using the URL.
+From the details page, it is also possible to query the data -- this is the way to retrieve JSON out of the database. However, the interface for this has not been fully developed. Currently, it is only possible to query the data using a standard API format through URL GET requests. You can go to `http://localhost:8888/api` in the application to find out more about querying using the URL.
 
 ##Developers
 
@@ -90,12 +87,13 @@ The application is written entirely in JavaScript, and has various different mod
 - `headers.js`: this file handles returning some of the common mime types.
 - `keys.json`: this file holds the access tokens for Twitter. Refer to section III.
 - `config.json`: this file holds some configurable options for the application. Refer to section II. You will generally not have to change anything in here.
-- `package.json`: this is the install file for the application, as necessary for NPM. This file holds some metadata for the application. Most notably, it will have references to all of the dependencies. This file is required in order to run “NPM install” on the package.
-- other files: the rest of the files are old versions for outdated iterations of the application. They are generally unused, but may have helpful code snippets for further features. Most notably, enrich.js shows how to add plugins for data processing.
-- /public: this folder holds files that are used by the website interface. It holds CSS and client-side JavaScript. It may be necessary to edit these for UI tweaks.
-- /views: this folder holds the individual website pages, written in JADE (http://jade-lang.com/). Think of these as the HTML files for the website.
+- `package.json`: this is the install file for the application, as necessary for NPM. This file holds some metadata for the application. Most notably, it will have references to all of the dependencies. This file is required in order to run `npm install` on the package.
+- **other files**: the rest of the files are old versions for outdated iterations of the application. They are generally unused, but may have helpful code snippets for further features. Most notably, `enrich.js` shows how to add plugins for data processing.
+- **/public**: this folder holds files that are used by the website interface. It holds CSS and client-side JavaScript. It may be necessary to edit these for UI tweaks.
+- **/views**: this folder holds the individual website pages, written in [JADE](http://jade-lang.com/). Think of these as the HTML files for the website.
+- **/unused**: very experimental. This is only for the brave.
 
-This application was written with the Express library (http://expressjs.com/), and relies heavily on its features. It was written while Express was still in experimental development, and therefore relies on the 2.5.x branch version. It is not compatible with newer versions of Express due to API changes in app creation and the Jade engine. These are the other notable dependencies:
+This application was written with the [Express library](http://expressjs.com/), and relies heavily on its features. It was written while Express was still in experimental development, and therefore relies on the 2.5.x branch version. It is not compatible with newer versions of Express due to API changes in app creation and the Jade engine. These are the other notable dependencies:
 
 - [MongoJS](https://github.com/gett/mongojs): this is the database driver. It is used to connect to MongoDB, and provides all of the necessary methods to interact with the database. This is usually attached to the app as db.
 - [request](https://github.com/mikeal/request): this is the de-facto NodeJS web request library, and is used to interface with the Search API for Twitter, as well as the geocoding service. This can be used anywhere that a web request is needed.
