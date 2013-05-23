@@ -1,5 +1,7 @@
 # ignore mongo data
 data/db/*
+# Except this file
+!data/db/.gitignore
 
 #ignore node files
 nodejs/*
