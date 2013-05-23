@@ -6,17 +6,17 @@ The code and all downloads are available from the Point Bank GitHub repository, 
 
 ###I: Running the application in Windows
 
-There is a Windows specific package for the application. There is a 32-bit zip and 64-bit zip, which include all of the correct binaries and settings. Download the appropriate zip file, and unzip it anywhere on your computer. It is advisable to use an easily accessible location, like C:\Workspace. _(These are still being set up.)_
+There is a Windows specific package for the application. Download the zip from tthis URL (http://goo.gl/xF3O9) and unzip it anywhere on your computer. It is advisable to use an easily accessible location, like C:\Workspace.
 
-When you unzip the archive, you will see a start.bat file. Double click this file, and the application will start – it will open two separate command-line windows, although interaction with those windows is not necessary.
+When you unzip the archive, you will see a `start.bat` file. Double click this file, and the application will start – it will open two separate command-line windows, although interaction with those windows is not necessary. If you get dependency errors when running Node, use the `install.bat` file in the same folder, although this should not be necessary most of the time.
 
 _Note: before running the application for the first time, you must obtain access tokens from Twitter. This is described in section III of Getting Started._
 
 ###II: Running the application in any environment
 
-Although only Windows zip files are available, the application can run on any operating system or environment. However, more steps are required to do so. First, download the plain application zip, which only contains the JavaScript files. Next, find a guide online for your operating system. You will need to install two software packages, called NodeJS and MongoDB. This process is further described below.
+Although only Windows zip files are available, the application can run on any operating system or environment. However, more steps are required to do so. First, download the plain application zip (http://goo.gl/qxFBg), which only contains the JavaScript files. Next, find a guide online for your operating system. You will need to install two software packages, called NodeJS and MongoDB. This process is further described below.
 
-Google will help with this. Searching for guides on setting up and configuring NodeJS and MongoDB, and can be found by searching this phrase: “Install and running [software name] on [operating system name]” replacing the names with the ones you are looking for.
+Google will help with this. Search for guides on setting up and configuring NodeJS and MongoDB, which can be found by searching this phrase: “Install and running [software name] on [operating system name]” replacing the names with the ones you are looking for.
 
 On a Mac, there are pre-built binaries of all of the files that are needed. These will be available at http://nodejs.org/download/ and http://www.mongodb.org/downloads. For Linux distributions, there is a good chance you will have to build these packages from source. Follow the guide that you find online.
 
