@@ -31,8 +31,8 @@ app.configure(function(){
 	//app.use(express.methodOverride());
 	//app.use(express.compiler({ src: __dirname + '/public', enable: ['less'] }));
 	//app.use(app.router);
-	//app.use('/public', express.static(__dirname + '/public'));
-	app.use( '/public', gzippo.staticGzip(__dirname + '/public') );
+	app.use('/public', express.static(__dirname + '/public'));
+	//app.use( '/public', gzippo.staticGzip(__dirname + '/public') );
 	app.use( gzippo.compress() );
 });
 
